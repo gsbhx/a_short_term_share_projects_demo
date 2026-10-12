@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#101b19" />
+    <meta name="description" content="Higo A股市场研究台：将盘面归因、产业研究与短线预案放进同一条研究脉络。" />
+    <title>Higo 市场研究台</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <aside class="sidebar" id="sidebar">
+        <a class="brand" href="#top" aria-label="Higo 首页">
+          <span class="brand-mark" aria-hidden="true"><i></i><i></i><i></i><i></i></span>
+          <span><b>higo</b><small>MARKET RESEARCH</small></span>
+        </a>
+
+        <div class="workspace-chip">
+          <span class="workspace-dot"></span>
+          <span><b>市场研究台</b><small>本地案例空间</small></span>
+          <span class="chevron">⌄</span>
+        </div>
+
+        <nav class="primary-nav" aria-label="主导航">
+          <p class="nav-caption">工作区</p>
+          <button class="nav-link active" data-view="overview" type="button">
+            <span class="nav-icon icon-grid" aria-hidden="true"></span>研究总览
+          </button>
+          <button class="nav-link" data-view="cases" type="button">
+            <span class="nav-icon icon-stack" aria-hidden="true"></span>案例库
+            <span class="nav-count">03</span>
+          </button>
+        </nav>
+
+        <div class="sidebar-divider"></div>
+        <div class="case-nav-head">
+          <p class="nav-caption">研究案例</p><span>按交易日</span>
+        </div>
+        <nav class="case-nav" id="case-nav" aria-label="案例列表"></nav>
+
+        <div class="sidebar-bottom">
+          <div class="source-note-icon">↗</div>
+          <div>
+            <b>来源与口径</b>
+            <p>指标与判断沿用各案例原文，查看全文可追溯上下文。</p>
+          </div>
+        </div>
+      </aside>
+
+      <main class="main-area" id="top">
+        <header class="topbar">
+          <button class="mobile-menu" id="mobile-menu" type="button" aria-label="打开导航">☰</button>
+          <div class="breadcrumbs"><span>HIGO</span><span class="crumb-slash">/</span><b id="breadcrumb-current">研究总览</b></div>
+          <div class="topbar-actions">
+            <label class="global-search" for="global-search">
+              <span class="search-symbol" aria-hidden="true">⌕</span>
+              <input id="global-search" type="search" placeholder="搜索案例、题材、股票…" autocomplete="off" />
+              <kbd>⌘ K</kbd>
+            </label>
+            <button class="avatar" type="button" aria-label="本地研究空间">H</button>
+          </div>
+        </header>
+
+        <div class="page-content">
+          <section class="view overview-view" id="overview-view">
+            <div class="hero-row">
+              <div class="hero-copy">
+                <div class="eyebrow"><span class="eyebrow-dot"></span> A 股研究 · 案例工作台</div>
+                <h1>把盘面读成<br /><em>一条研究脉络。</em></h1>
+                <p class="hero-description">从个股异动归因，到产业生命力复盘，再到情绪周期与次日预案。三种视角，回到同一份市场记录。</p>
+                <div class="hero-meta"><span class="meta-calendar">▦</span> 2026.09.28 <b>—</b> 2026.10.09 <span class="meta-divider"></span> 3 个观察截面</div>
+              </div>
+              <div class="hero-art" aria-hidden="true">
+                <div class="orbit orbit-a"></div><div class="orbit orbit-b"></div>
+                <div class="orbit-core"><span>H</span><small>RESEARCH</small></div>
+                <span class="orbit-point point-a"></span><span class="orbit-point point-b"></span><span class="orbit-point point-c"></span>
+                <span class="art-label label-a">FACTS</span><span class="art-label label-b">THEMES</span><span class="art-label label-c">PLAN</span>
+              </div>
+            </div>
+
+            <section class="snapshot-section" aria-labelledby="snapshot-title">
+              <div class="section-heading">
+                <div><p class="section-kicker">LATEST CASE SNAPSHOT</p><h2 id="snapshot-title">最近一份案例 · 深 V 修复</h2></div>
+                <button class="text-action" type="button" data-open-case="industry">打开完整复盘 <span>↗</span></button>
+              </div>
+              <div class="snapshot-card">
+                <div class="snapshot-intro">
+                  <span class="snapshot-date">09 <small>OCT</small></span>
+                  <div><span class="market-tag positive"><i></i> 探底回升</span><p>午后放量反弹，活跃题材同步扩散</p></div>
+                </div>
+                <div class="snapshot-metrics">
+                  <div class="snapshot-metric"><span>全市场成交额</span><strong>19,005.6<small>亿元</small></strong><em class="up-text">较前日 +12.17%</em></div>
+                  <div class="snapshot-metric"><span>非 ST 涨停</span><strong>69<small>家</small></strong><em>跌停 8 家</em></div>
+                  <div class="snapshot-metric"><span>非 ST 封板率</span><strong>83.13<small>%</small></strong><em>涨停 69 / 炸板 14</em></div>
+                </div>
+                <div class="snapshot-chart" aria-label="报告描述的探底回升走势">
+                  <span class="chart-label">日内结构</span>
+                  <svg viewBox="0 0 210 64" role="img" aria-label="先下探后回升的折线示意图">
+                    <defs><linearGradient id="chart-fill" x1="0" x2="0" y1="0" y2="1"><stop offset="0" stop-color="#49a985" stop-opacity=".2"/><stop offset="1" stop-color="#49a985" stop-opacity="0"/></linearGradient></defs>
+                    <path class="chart-area" d="M0 14 C18 12 22 19 36 23 S53 37 67 43 S78 55 96 53 S112 48 125 46 S144 35 158 31 S176 19 188 17 S198 9 210 6 L210 64 L0 64Z"/>
+                    <path class="chart-line" d="M0 14 C18 12 22 19 36 23 S53 37 67 43 S78 55 96 53 S112 48 125 46 S144 35 158 31 S176 19 188 17 S198 9 210 6"/>
+                    <circle cx="210" cy="6" r="3.2" class="chart-end"/>
+                  </svg>
+                  <div class="chart-axis"><span>开盘</span><span>午后</span><span>收盘</span></div>
+                </div>
+              </div>
+              <p class="data-footnote"><span>i</span> 指标来自 2026-10-09 案例原文；走势为报告叙述的结构示意，不代表分时行情数据。</p>
+            </section>
+
+            <section class="cases-section" id="case-library" aria-labelledby="cases-title">
+              <div class="section-heading">
+                <div><p class="section-kicker">RESEARCH CASES</p><h2 id="cases-title">案例时间轴 <span class="muted-count">03</span></h2></div>
+                <div class="case-sort-note"><span class="sort-lines">☷</span> 按交易日排序 <span class="sort-chevron">⌄</span></div>
+              </div>
+              <div class="timeline-list" id="timeline-list"></div>
+              <p class="timeline-footnote">按报告标注的交易日排序。不同日期的数据沿用各自统计口径，页面不作跨日推算。</p>
+            </section>
+
+            <section class="workflow-section">
+              <div class="workflow-heading"><div><p class="section-kicker">ONE RESEARCH LOOP</p><h2>三个案例，三个研究动作</h2></div><p>从发生了什么，走到接下来验证什么。</p></div>
+              <div class="workflow-grid">
+                <button class="workflow-card" type="button" data-open-case="daily"><span class="workflow-number">01</span><span class="workflow-icon orange">↗</span><b>盘面归因</b><small>看异动、封板与炸板背后的证据链</small><span class="workflow-arrow">↗</span></button>
+                <button class="workflow-card" type="button" data-open-case="industry"><span class="workflow-number">02</span><span class="workflow-icon green">⌁</span><b>产业研究</b><small>比较当日热度与长期产业生命力</small><span class="workflow-arrow">↗</span></button>
+                <button class="workflow-card" type="button" data-open-case="shortterm"><span class="workflow-number">03</span><span class="workflow-icon blue">◎</span><b>情绪与预案</b><small>记录候选门槛、锚点与情景路径</small><span class="workflow-arrow">↗</span></button>
+              </div>
+            </section>
+            <footer class="page-footer"><span>HIGO RESEARCH DESK</span><span>本地案例浏览 · 原始报告保留</span></footer>
+          </section>
+
+          <section class="view report-view hidden" id="report-view">
+            <div class="report-header">
+              <button class="back-link" type="button" data-view="overview">← 返回总览</button>
+              <div class="report-title-row"><div><div class="eyebrow" id="report-eyebrow"></div><h1 id="report-title"></h1></div><button class="download-button" id="download-report" type="button"><span>↓</span> 下载原文</button></div>
+              <p class="report-lead" id="report-lead"></p>
+              <div class="report-meta-row" id="report-meta"></div>
+            </div>
+            <div class="reader-layout">
+              <aside class="reader-outline"><div class="outline-title">本文目录 <span>TOC</span></div><nav id="outline-nav" aria-label="报告目录"></nav></aside>
+              <article class="markdown-body" id="report-content" aria-live="polite"></article>
+            </div>
+            <footer class="page-footer"><button class="back-link" type="button" data-view="overview">← 返回案例总览</button><span>来源：本地原始案例文件</span></footer>
+          </section>
+
+          <section class="view search-view hidden" id="search-view">
+            <div class="search-page-head"><p class="section-kicker">SEARCH ALL REPORTS</p><h1>全文搜索</h1><p id="search-summary">在三份案例原文中查找关键词。</p></div>
+            <div class="search-results" id="search-results"></div>
+          </section>
+        </div>
+      </main>
+    </div>
+    <div class="mobile-scrim" id="mobile-scrim"></div>
+    <script src="/app.js" defer></script>
+  </body>
+</html>
